@@ -1,8 +1,12 @@
+import java.util.InputMismatchException;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        scanner.useLocale(Locale.US); 
+
         while (true) {
             System.out.println("=== HE THONG KIEM THU BAI TOAN ===");
             System.out.println("1. Tinh chu vi hinh chu nhat");
@@ -16,7 +20,15 @@ public class main {
             System.out.println("0. Thoat");
             System.out.print("Chon chuc nang (0-8): ");
             
-            int choice = scanner.nextInt();
+            int choice = -1;
+            try {
+                choice = scanner.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Loi: Vui long chi nhap so nguyen.\n");
+                scanner.nextLine();
+                continue;
+            }
+
             if (choice == 0) {
                 break;
             }
@@ -78,6 +90,9 @@ public class main {
                     default:
                         System.out.println("Lua chon khong hop le.");
                 }
+            } catch (InputMismatchException e) {
+                System.out.println("Loi: Du lieu dau vao khong dung dinh dang.");
+                scanner.nextLine();
             } catch (Exception e) {
                 System.out.println("Loi: " + e.getMessage());
             }
