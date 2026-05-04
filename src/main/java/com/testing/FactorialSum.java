@@ -1,20 +1,20 @@
 package com.testing;
 
 /**
- * Lop tinh toan tong cac thua so
+ * Class for calculating factorial sum
  * S = 1! + 2! + 3! + ... + n!
  */
 public class FactorialSum {
     
     /**
-     * Tinh giai thua cua mot so
-     * @param n so do
-     * @return giai thua cua n
-     * @throws IllegalArgumentException neu n am
+     * Calculate factorial of a number
+     * @param n the number
+     * @return the factorial of n
+     * @throws IllegalArgumentException if n is negative
      */
     public static long factorial(int n) {
         if (n < 0) {
-            throw new IllegalArgumentException("Giai thua khong xac dinh cho cac so am");
+            throw new IllegalArgumentException("Factorial is not defined for negative numbers");
         }
         
         if (n == 0 || n == 1) {
@@ -30,14 +30,14 @@ public class FactorialSum {
     }
     
     /**
-     * Tinh tong cac giai thua tu 1 den n
-     * @param n can tren
-     * @return tong cac giai thua
-     * @throws IllegalArgumentException neu n nho hon 1
+     * Calculate sum of factorials from 1 to n
+     * @param n the upper limit
+     * @return the sum of factorials
+     * @throws IllegalArgumentException if n is less than 1
      */
     public static long calculateSumOfFactorials(int n) {
         if (n < 1) {
-            throw new IllegalArgumentException("n phai lon hon hoac bang 1");
+            throw new IllegalArgumentException("n must be at least 1");
         }
         
         long sum = 0;

@@ -1,20 +1,20 @@
 package com.testing;
 
 /**
- * Lop tinh toan Uoc Chung Lon Nhat (UCLN)
+ * Class for calculating Greatest Common Divisor (GCD)
  */
 public class GCD {
     
     /**
-     * Tinh UCLN cua hai so bang thuat toan Euclid
-     * @param a so thu nhat
-     * @param b so thu hai
-     * @return UCLN cua a va b
-     * @throws IllegalArgumentException neu a hoac b nho hon 1
+     * Calculate the GCD of two numbers using Euclidean algorithm
+     * @param a the first number
+     * @param b the second number
+     * @return the GCD of a and b
+     * @throws IllegalArgumentException if either a or b is less than 1
      */
     public static int findGCD(int a, int b) {
         if (a < 1 || b < 1) {
-            throw new IllegalArgumentException("Ca hai so phai la so duong");
+            throw new IllegalArgumentException("Both numbers must be positive");
         }
         
         while (b != 0) {
