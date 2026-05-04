@@ -1,20 +1,20 @@
 package com.testing;
 
 /**
- * Class for calculating alternating sum
+ * Lop tinh toan tong xen ke
  * S = 1 - 2 + 3 - 4 + ... + (-1)^(n+1) * n
  */
 public class AlternatingSum {
     
     /**
-     * Calculate alternating sum from 1 to n
-     * @param n the upper limit
-     * @return the alternating sum
-     * @throws IllegalArgumentException if n is less than 1
+     * Tinh toan tong xen ke tu 1 den n
+     * @param n can tren
+     * @return tong xen ke
+     * @throws IllegalArgumentException neu n nho hon 1
      */
     public static long calculateSum(int n) {
         if (n < 1) {
-            throw new IllegalArgumentException("n must be at least 1");
+            throw new IllegalArgumentException("n phai lon hon hoac bang 1");
         }
         
         long sum = 0;

@@ -1,61 +1,64 @@
-# Software Evaluation and Testing - White-Box Testing Practice
+Dưới đây là toàn bộ nội dung đã được định dạng chuẩn Markdown bên trong khối mã (code block). Bạn chỉ cần bấm vào nút **Copy code** ở góc trên bên phải của khung dưới đây là có thể dán trực tiếp vào file `README.md` của mình trên GitHub:
 
-## Project Description
+```markdown
+# Đánh giá và Kiểm thử Phần mềm - Thực hành Kiểm thử Hộp trắng
 
-This project implements white-box testing practices using Java and JUnit 5. It includes 8 practical programs with comprehensive test cases designed to achieve high code coverage (100% statement coverage and 100% branch coverage).
+## Mô tả Dự án
 
-## Programs Implemented
+Dự án này thực hiện các kỹ thuật kiểm thử hộp trắng (white-box testing) sử dụng Java và JUnit 5. Dự án bao gồm 8 chương trình thực hành cùng với các ca kiểm thử (test cases) toàn diện, được thiết kế nhằm đạt độ bao phủ mã nguồn cao (**100% statement coverage** - bao phủ câu lệnh và **100% branch coverage** - bao phủ nhánh).
 
-### 1. Rectangle (Hình Chữ Nhật)
-- `Rectangle.calculatePerimeter(length, width)` - Calculate perimeter of rectangle
-- `Rectangle.calculateArea(length, width)` - Calculate area of rectangle
-- **Branches**: 2 (input validation)
-- **Test Cases**: 17 tests
+## Các Chương trình Đã Triển khai
 
-### 2. Quadratic Equation (Phương Trình Bậc 2)
-- `QuadraticEquation.solve(a, b, c)` - Solve ax² + bx + c = 0
-- **Branches**: 8 (a=0, discriminant >0, =0, <0)
-- **Test Cases**: 24 tests
-- **Coverage**: Two solutions, one solution, no real solution, linear equation, infinite solutions
+### 1. Hình chữ nhật (Rectangle)
+- `Rectangle.calculatePerimeter(length, width)` - Tính chu vi hình chữ nhật
+- `Rectangle.calculateArea(length, width)` - Tính diện tích hình chữ nhật
+- **Số nhánh (Branches)**: 2 (kiểm tra tính hợp lệ của đầu vào)
+- **Ca kiểm thử (Test Cases)**: 17 ca
 
-### 3. Month Days (Tính Số Ngày Của Một Tháng)
-- `MonthDays.getDaysInMonth(month, year)` - Get days in month
-- **Branches**: 12 months + leap year logic
-- **Test Cases**: 25 tests
-- **Coverage**: All months, leap year rules (divisible by 400, 100, 4)
+### 2. Phương trình bậc 2 (Quadratic Equation)
+- `QuadraticEquation.solve(a, b, c)` - Giải phương trình ax² + bx + c = 0
+- **Số nhánh**: 8 (a=0, delta >0, =0, <0)
+- **Ca kiểm thử**: 24 ca
+- **Độ bao phủ**: Phương trình có hai nghiệm phân biệt, nghiệm kép, vô nghiệm thực, phương trình bậc nhất, vô số nghiệm.
 
-### 4. Prime Number (Kiểm Tra Số Nguyên Tố)
-- `PrimeNumber.isPrime(n)` - Check if n is prime
-- **Branches**: 4 (n=2, even, divisor found, loop end)
-- **Test Cases**: 38 tests
-- **Coverage**: Primes, even numbers, odd composites, edge cases
+### 3. Tính số ngày của một tháng (Month Days)
+- `MonthDays.getDaysInMonth(month, year)` - Lấy số ngày trong một tháng
+- **Số nhánh**: 12 tháng + logic tính năm nhuận
+- **Ca kiểm thử**: 25 ca
+- **Độ bao phủ**: Tất cả các tháng, quy tắc năm nhuận (chia hết cho 400, 100, 4).
 
-### 5. Alternating Sum (Tính Tổng S = 1-2+3-4+...+n)
-- `AlternatingSum.calculateSum(n)` - Calculate alternating sum
-- **Branches**: 2 (odd/even pattern)
-- **Test Cases**: 21 tests
-- **Coverage**: Boundary values, pattern verification
+### 4. Kiểm tra số nguyên tố (Prime Number)
+- `PrimeNumber.isPrime(n)` - Kiểm tra xem n có phải là số nguyên tố không
+- **Số nhánh**: 4 (n=2, số chẵn, tìm thấy ước số, kết thúc vòng lặp)
+- **Ca kiểm thử**: 38 ca
+- **Độ bao phủ**: Số nguyên tố, số chẵn, hợp số lẻ, các trường hợp biên.
 
-### 6. GCD (Ước Chung Lớn Nhất)
-- `GCD.findGCD(a, b)` - Find GCD using Euclidean algorithm
-- **Branches**: 1 loop (while b != 0)
-- **Test Cases**: 24 tests
-- **Coverage**: Multiples, coprimes, reversed order, edge cases
+### 5. Tính tổng đan dấu (Alternating Sum)
+- `AlternatingSum.calculateSum(n)` - Tính tổng S = 1 - 2 + 3 - 4 + ... + n
+- **Số nhánh**: 2 (quy luật chẵn/lẻ)
+- **Ca kiểm thử**: 21 ca
+- **Độ bao phủ**: Các giá trị biên, xác minh theo quy luật.
 
-### 7. Factorial Sum (Tính Tổng S = 1! + 2! + 3! + ... + n!)
-- `FactorialSum.factorial(n)` - Calculate factorial
-- `FactorialSum.calculateSumOfFactorials(n)` - Calculate sum of factorials
-- **Branches**: 2 (n=0/1 special case, loop)
-- **Test Cases**: 29 tests
-- **Coverage**: Base cases, loop iterations, accumulation
+### 6. Ước chung lớn nhất (GCD)
+- `GCD.findGCD(a, b)` - Tìm ƯCLN bằng thuật toán Euclid
+- **Số nhánh**: 1 vòng lặp (while b != 0)
+- **Ca kiểm thử**: 24 ca
+- **Độ bao phủ**: Bội số, hai số nguyên tố cùng nhau, thứ tự đảo ngược, các trường hợp biên.
 
-## Project Structure
+### 7. Tính tổng giai thừa (Factorial Sum)
+- `FactorialSum.factorial(n)` - Tính giai thừa của n
+- `FactorialSum.calculateSumOfFactorials(n)` - Tính tổng S = 1! + 2! + 3! + ... + n!
+- **Số nhánh**: 2 (trường hợp đặc biệt n=0/1, vòng lặp)
+- **Ca kiểm thử**: 29 ca
+- **Độ bao phủ**: Các trường hợp cơ sở, các bước lặp, tính cộng dồn.
 
-```
+## Cấu trúc Dự án
+
+```text
 Buoi 4.1/
-├── pom.xml                          # Maven configuration
-├── README.md                        # This file
-├── TEST_CASES.md                   # Detailed test case documentation
+├── pom.xml                  # Cấu hình Maven
+├── README.md                # File hướng dẫn này
+├── TEST_CASES.md            # Tài liệu chi tiết về các ca kiểm thử
 ├── src/
 │   ├── main/
 │   │   └── java/
@@ -77,137 +80,137 @@ Buoi 4.1/
 │               ├── AlternatingSumTest.java
 │               ├── GCDTest.java
 │               └── FactorialSumTest.java
-└── target/                         # Build output
-    └── coverage/                   # JaCoCo coverage report
+└── target/                  # Thư mục chứa kết quả build
+    └── coverage/            # Báo cáo độ bao phủ mã nguồn của JaCoCo
 ```
 
-## Requirements Met
+## Các Yêu cầu Đã Đạt Được
 
-✓ **Java Implementation**: All programs written in Java  
-✓ **Organized Structure**: Code organized into separate classes/methods  
-✓ **JUnit Testing**: Comprehensive JUnit 5 test suite  
-✓ **Code Analysis**: Statement and branch identification  
-✓ **High Coverage**: Aim for 100% statement and 100% branch coverage  
-✓ **GitHub Integration**: Code pushed to repository  
+✓ **Triển khai bằng Java**: Tất cả các bài toán đều được viết bằng Java.  
+✓ **Cấu trúc Rõ ràng**: Mã nguồn được chia thành các class/phương thức riêng biệt.  
+✓ **Kiểm thử JUnit**: Sử dụng bộ kiểm thử JUnit 5 toàn diện.  
+✓ **Phân tích Mã nguồn**: Xác định rõ các câu lệnh và nhánh logic.  
+✓ **Độ bao phủ Cao**: Nhắm tới mục tiêu 100% bao phủ câu lệnh và 100% bao phủ nhánh.  
+✓ **Tích hợp GitHub**: Mã nguồn đã được đẩy (push) lên kho lưu trữ.  
 
-## Test Coverage Goals
+## Mục tiêu Bao phủ của Kiểm thử
 
-Each test suite is designed to:
+Mỗi bộ kiểm thử (test suite) được thiết kế nhằm mục đích:
 
-1. **Statement Coverage (100%)**: Every executable statement is executed by at least one test
-2. **Branch Coverage (100%)**: Every conditional branch is tested for both true and false
-3. **Edge Cases**: Boundary values, invalid inputs, special cases
-4. **Exception Handling**: Input validation and error conditions
+1. **Bao phủ câu lệnh - Statement Coverage (100%)**: Mọi dòng lệnh thực thi đều được chạy qua ít nhất một lần.
+2. **Bao phủ nhánh - Branch Coverage (100%)**: Mọi nhánh điều kiện đều được kiểm tra cho cả hai trường hợp Đúng (True) và Sai (False).
+3. **Các trường hợp biên (Edge Cases)**: Kiểm tra các giá trị biên, đầu vào không hợp lệ và các trường hợp đặc biệt.
+4. **Xử lý Ngoại lệ (Exception Handling)**: Xác thực tính hợp lệ của đầu vào và các điều kiện gây ra lỗi.
 
-## Test Statistics
+## Thống kê Kiểm thử
 
-| Program | Test Cases | Statements | Branches |
+| Chương trình | Số Ca Kiểm thử | Câu lệnh | Số Nhánh |
 |---------|-----------|-----------|----------|
-| Rectangle | 17 | 10 | 2 |
-| QuadraticEquation | 24 | 30+ | 8 |
-| MonthDays | 25 | 20+ | 13 |
-| PrimeNumber | 38 | 10+ | 4 |
-| AlternatingSum | 21 | 5+ | 2 |
-| GCD | 24 | 8+ | 2 |
-| FactorialSum | 29 | 15+ | 4 |
-| **TOTAL** | **178** | **98+** | **35+** |
+| Hình chữ nhật (Rectangle) | 17 | 10 | 2 |
+| Phương trình bậc 2 (QuadraticEquation) | 24 | 30+ | 8 |
+| Số ngày trong tháng (MonthDays) | 25 | 20+ | 13 |
+| Số nguyên tố (PrimeNumber) | 38 | 10+ | 4 |
+| Tổng đan dấu (AlternatingSum) | 21 | 5+ | 2 |
+| Ước chung lớn nhất (GCD) | 24 | 8+ | 2 |
+| Tổng giai thừa (FactorialSum) | 29 | 15+ | 4 |
+| **TỔNG CỘNG** | **178** | **98+** | **35+** |
 
-## How to Run Tests
+## Hướng dẫn Chạy Kiểm thử
 
-### Prerequisites
-- Java 11 or higher
-- Maven 3.6.0 or higher
+### Yêu cầu Hệ thống (Prerequisites)
+- Java 11 trở lên
+- Maven 3.6.0 trở lên
 
-### Run All Tests
+### Chạy Toàn bộ Kiểm thử
 ```bash
 mvn clean test
 ```
 
-### Run Specific Test Class
+### Chạy một Lớp Kiểm thử Cụ thể
 ```bash
 mvn test -Dtest=RectangleTest
 mvn test -Dtest=QuadraticEquationTest
 ```
 
-### Generate Coverage Report
+### Tạo Báo cáo Độ bao phủ (Coverage Report)
 ```bash
 mvn clean test jacoco:report
 ```
+*Báo cáo sẽ được tạo tại đường dẫn:* `target/site/jacoco/index.html`
 
-Coverage report will be generated at: `target/site/jacoco/index.html`
-
-### Run Tests with Detailed Output
+### Chạy Kiểm thử với Log Chi tiết
 ```bash
 mvn test -X
 ```
 
-## Test Case Design Methodology
+## Phương pháp Thiết kế Ca Kiểm thử
 
-### 1. Valid Processing Flows (Issue 1)
-- Normal use cases with valid inputs
-- Expected output verification
-- Pattern verification for algorithms
+### 1. Các Luồng xử lý Hợp lệ (Issue 1)
+- Các trường hợp sử dụng thông thường với dữ liệu đầu vào hợp lệ.
+- Xác minh kết quả đầu ra đúng như mong đợi.
+- Xác minh tính đúng đắn của các thuật toán.
 
-### 2. Error Branches & Edge Cases (Issue 2)
-- Boundary value testing
-- Invalid input handling
-- Loop edge conditions
-- Exception scenarios
-- Conditional branch testing
+### 2. Các Nhánh lỗi & Trường hợp Biên (Issue 2)
+- Kiểm thử các giá trị biên.
+- Xử lý các đầu vào không hợp lệ.
+- Các điều kiện biên của vòng lặp.
+- Các kịch bản ném ngoại lệ (Exception).
+- Kiểm thử các nhánh logic điều kiện.
 
-## GitHub Issues
+## Các Issue trên GitHub
 
-### Issue 1: White-Box Tests for Valid Processing Flows
-Covers test cases for:
-- Normal rectangle dimensions
-- Quadratic equations with real solutions
-- All month lengths
-- Prime numbers
-- Alternating sum calculations
-- GCD calculations
-- Factorial sum calculations
+### Issue 1: Kiểm thử Hộp trắng cho Các luồng Xử lý Hợp lệ
+Bao gồm các ca kiểm thử cho:
+- Kích thước hình chữ nhật thông thường hợp lệ.
+- Phương trình bậc 2 có nghiệm thực.
+- Số ngày của tất cả các tháng trong năm.
+- Các số nguyên tố.
+- Tính toán chuỗi tổng đan dấu.
+- Các phép tính ƯCLN.
+- Các phép tính chuỗi tổng giai thừa.
 
-### Issue 2: White-Box Tests for Error Branches & Edge Cases
-Covers test cases for:
-- Invalid inputs (zero, negative values)
-- Boundary conditions
-- Exception handling
-- Special cases (leap year, perfect squares, etc.)
-- Loop boundaries
-- Conditional branches
+### Issue 2: Kiểm thử Hộp trắng cho Các nhánh Lỗi & Trường hợp Biên
+Bao gồm các ca kiểm thử cho:
+- Đầu vào không hợp lệ (giá trị bằng 0, số âm).
+- Các điều kiện biên.
+- Xử lý ngoại lệ (Exception).
+- Các trường hợp đặc biệt (năm nhuận, số chính phương, v.v.).
+- Ranh giới của các vòng lặp.
+- Các nhánh điều kiện.
 
-## Code Quality
+## Chất lượng Mã nguồn
 
-- **Language**: Java 11
-- **Testing Framework**: JUnit 5
-- **Coverage Tool**: JaCoCo
-- **Build Tool**: Maven
-- **Code Style**: Following Java conventions
+- **Ngôn ngữ**: Java 11
+- **Framework Kiểm thử**: JUnit 5
+- **Công cụ Đo độ bao phủ**: JaCoCo
+- **Công cụ Build**: Maven
+- **Phong cách Code (Code Style)**: Tuân thủ các quy chuẩn viết code của Java (Java conventions).
 
-## White-Box Testing Approach
+## Cách tiếp cận Kiểm thử Hộp trắng
 
-Each test class identifies and tests:
+Mỗi lớp kiểm thử được xây dựng để xác định và kiểm tra:
 
-1. **Statements**: Every line of executable code
-2. **Branches**: All conditional paths (if/else, switch)
-3. **Loops**: Entry, iterations, exit conditions
-4. **Exceptions**: Error conditions and exception throwing
+1. **Câu lệnh (Statements)**: Mọi dòng code có thể thực thi.
+2. **Nhánh (Branches)**: Tất cả các luồng rẽ nhánh điều kiện (if/else, switch).
+3. **Vòng lặp (Loops)**: Điểm bắt đầu, các vòng lặp lặp lại, và điều kiện thoát.
+4. **Ngoại lệ (Exceptions)**: Các điều kiện lỗi và việc ném ra ngoại lệ.
 
-## Author Notes
+## Ghi chú của Tác giả
 
-This project demonstrates comprehensive white-box testing practices with focus on:
-- Complete branch coverage
-- Boundary value analysis
-- Exception testing
-- Loop boundary conditions
-- Conditional logic verification
+Dự án này minh họa các kỹ thuật thực hành kiểm thử hộp trắng một cách toàn diện, tập trung vào:
+- Bao phủ hoàn toàn các nhánh logic.
+- Phân tích các giá trị biên.
+- Kiểm thử các ngoại lệ có thể xảy ra.
+- Kiểm tra các điều kiện ranh giới của vòng lặp.
+- Xác minh chặt chẽ các logic điều kiện.
 
-## License
+## Giấy phép (License)
 
-Educational project for Software Testing course
+Đây là dự án giáo dục phục vụ cho môn học Kiểm thử Phần mềm.
 
-## References
+## Tài liệu Tham khảo
 
-- JUnit 5 Documentation: https://junit.org/junit5/docs/current/user-guide/
-- Java Code Coverage: https://www.eclemma.org/jacoco/
-- White-Box Testing: https://en.wikipedia.org/wiki/White-box_testing
+- Tài liệu JUnit 5: https://junit.org/junit5/docs/current/user-guide/
+- Độ bao phủ mã nguồn Java (JaCoCo): https://www.eclemma.org/jacoco/
+- Kiểm thử Hộp trắng (White-Box Testing): https://en.wikipedia.org/wiki/White-box_testing
+```
