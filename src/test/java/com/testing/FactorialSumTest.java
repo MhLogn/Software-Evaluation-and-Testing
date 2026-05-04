@@ -171,8 +171,8 @@ public class FactorialSumTest {
     @DisplayName("Sum of factorials for n=12")
     public void testSumFactorialsN12() {
         long result = FactorialSum.calculateSumOfFactorials(12);
-        // 1! + 2! + ... + 12! = 479001599
-        assertEquals(479001599L, result, "Sum for n=12 should be 479001599");
+        // 1! + 2! + ... + 12! = 522956313
+        assertEquals(522956313L, result, "Sum for n=12 should be 522956313");
     }
     
     // ==================== Edge Cases ====================
